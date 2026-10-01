@@ -1,13 +1,13 @@
 <?php
 
-function middleware($rota){
-    echo "3. Middleware está verificando a requisição.<br>";
+function middleware($rota, &$log){
+    $log[] = "3. Middleware está verificando a requisição.";
     $permitido = true;
 
     if ($permitido) {
-        echo "4. Middleware permitiu continuar.<br>";
-        dispatcher($rota);
+        $log[] = "4. Middleware permitiu continuar.";
+        dispatcher($rota, $log);
     } else {
-        echo "4. Middleware bloqueou a requisição.<br>";
+        $log[] = "4. Middleware bloqueou a requisição.";
     }
 }
