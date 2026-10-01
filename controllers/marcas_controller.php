@@ -17,4 +17,4 @@ function marcasController(&$log){
         'titulo'   => 'Marcas',
         'conteudo' => $html
     ];
-}       
+}
